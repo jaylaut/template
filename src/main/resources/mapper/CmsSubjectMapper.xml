@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jay.template.dao.CmsSubjectDao">
+
+    <resultMap id="BaseResultMap" type="com.jay.template.entity.CmsSubject"/>
+
+    <select id="selectCmsSubjectList" resultMap="BaseResultMap">
+        select * from cms_subject
+    </select>
+
+    <select id="selectCmsSubjectById" parameterType="long" resultType="com.jay.template.entity.CmsSubject">
+        select * from cms_subject where id={id}
+    </select>
+</mapper>
